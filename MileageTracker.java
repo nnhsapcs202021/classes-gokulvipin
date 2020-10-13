@@ -137,8 +137,10 @@ public class MileageTracker
      * 
      * @param newVIN    the vehicle identification (VIN) of this car
      */
-    public void setVIN(String vin)
+    
+    
+    public void setVIN(String newVIN)
     {
-        vin = vin;
+        vin = newVIN;
     }
 }
