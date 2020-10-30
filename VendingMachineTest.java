@@ -53,15 +53,17 @@ public class VendingMachineTest
     
     @Test
     public void testfillUp(){
-    VendingMachine machine = new VendingMachine();
-    machine.fillUp();
-    int cans = machine.getCanCount();
+        VendingMachine machine = new VendingMachine();
+        machine.fillUp();
+        int cans = machine.getCanCount();
     
-    assertEquals(cans,10);
+        assertEquals(cans,10);
     }
     
     @Test
     public void testnumOfCans(){
-        VendingMachine machine = new VendingMachine(10);       
+        VendingMachine machine = new VendingMachine(10); 
+        int cans = machine.getCanCount();
+        assertEquals(cans,10);
     }
 }
