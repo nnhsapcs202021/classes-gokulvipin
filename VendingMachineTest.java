@@ -46,7 +46,9 @@ public class VendingMachineTest
         VendingMachine machine = new VendingMachine();
         machine.insertToken();
         int tokens = machine.getTokenCount();
+        int cans = machine.getCanCount();
         assertEquals(tokens,1);
+        assertEquals(cans,9);
     }
     
     @Test
@@ -54,6 +56,12 @@ public class VendingMachineTest
     VendingMachine machine = new VendingMachine();
     machine.fillUp();
     int cans = machine.getCanCount();
+    
     assertEquals(cans,10);
+    }
+    
+    @Test
+    public void testnumOfCans(){
+        VendingMachine machine = new VendingMachine(10);       
     }
 }
