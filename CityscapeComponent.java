@@ -6,14 +6,25 @@ import javax.swing.JComponent;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author gcschmit
- * @version 18 July 2014
+ * @author gokulvipin
+ * @version 11-6-2020
  */
 public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
+    public class Sun{
+        private int radius = 5;
+        private String color;
+        private Sun sun1;   
+    }
+     /**
+     * Default constructor for the Sun class.
+     */
+    //public int Sun(){
+    //}
+    //public int Sun(int radius){
+    //}
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
