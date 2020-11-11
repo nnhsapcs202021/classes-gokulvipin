@@ -13,18 +13,7 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    public class Sun{
-        private int radius = 5;
-        private String color;
-        private Sun sun1;   
-    }
-     /**
-     * Default constructor for the Sun class.
-     */
-    //public int Sun(){
-    //}
-    //public int Sun(int radius){
-    //}
+    
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -42,7 +31,7 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        
+        Sun sun1 = new Sun(5,"YELLOW");
         // invoke the draw method on each object in your Cityscape
         // ...
         
