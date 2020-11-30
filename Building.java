@@ -1,30 +1,40 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
-
+import java.awt.Color;
 /**
- * Write a description of class building here.
+ * Red blocks of rectangle
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author gokulvipin
+ * @version 11/30/2020
  */
 public class Building
 {
-  private double breadth ;
-  private double height;
-  private String color; 
+    private double breadth ;
+    private double height;
+    private int xLeft;
+    private int yTop;
 
     /**
-     * Default constructor for the Sun class.
+     * Default constructor for the Building class.
      */
-    public Building(int initialBreadth, int initialHeight, String initialColor){
+    public Building(int initialBreadth, int initialHeight,  int initialX, int initialY){
         this.breadth = initialBreadth;
         this.height = initialHeight;
-        this.color = initialColor;  
+        this.xLeft = initialX;
+        this.yTop = initialY;
     }
+
+    /**
+      Draws the building.
+      @param g2 the graphics context
+   */
     public void draw(Graphics2D g2)
-   {
-      
-   }
+    {
+         Rectangle2D.Double body = new Rectangle2D.Double(this.xLeft,this.yTop,this.breadth,this.height);      
+         g2.setColor(Color.red);
+         //fills the building
+         g2.fill(body);
+    }
 
 }
 

@@ -3,25 +3,25 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
-
+import java.awt.Color;
 /**
-   A car shape that can be positioned anywhere on the screen.
+   *A car shape that can be positioned anywhere on the screen.
+   * @author gokulvipin
+   * @version 11/30/2020
 */
 public class Carnew
 {
    private int xLeft;
    private int yTop;
-   private String color;
    /**
       Constructs a car with a given top left corner.
       @param x the x coordinate of the top left corner
       @param y the y coordinate of the top left corner
    */
-   public Carnew(int initialX, int initialY, String initialColor)
+   public Carnew(int initialX, int initialY)
    {
       this.xLeft = initialX;
       this.yTop = initialY;
-      this.color = initialColor;
    }
 
    /**
@@ -48,13 +48,17 @@ public class Carnew
       Line2D.Double frontWindshield = new Line2D.Double(r1, r2);
       Line2D.Double roofTop = new Line2D.Double(r2, r3);
       Line2D.Double rearWindshield = new Line2D.Double(r3, r4);
-      
+      g2.setColor(Color.red);
+
       // draws the car
-      g2.draw(body);
-      g2.draw(frontTire);
-      g2.draw(rearTire);
+      g2.fill(body);
+      g2.fill(frontTire);
+      g2.fill(rearTire);
       g2.draw(frontWindshield);      
       g2.draw(roofTop);      
       g2.draw(rearWindshield);      
    }
+   public void drive(){
+       this.xLeft += 10;
+    }
 }

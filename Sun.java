@@ -1,27 +1,37 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
-
+import java.awt.Color;
 /**
- * Write a description of class Sun here.
+ * A yellow Circle that moves from left to right
  *
  * @author gokulvipin
- * @version (a version number or a date)
+ * @version 11/30/2020
  */
 public class Sun{
-    private double radius ;
-    private String color;
+    private int xLeft;
+    private int yTop;
 
     /**
      * Default constructor for the Sun class.
      */
-    public Sun(int initialRadius, String initialColor){
-        this.radius = initialRadius;
-        this.color = initialColor;  
+    public Sun(int initialX, int initialY){
+        this.xLeft = initialX;
+        this.yTop = initialY;  
     }
-    public void draw(Graphics2D g2)
-   {
-      
-   }
 
+    /**
+      Draws the sun.
+      @param g2 the graphics context
+   */
+    public void draw(Graphics2D g2)
+    {
+        Ellipse2D.Double body = new Ellipse2D.Double(this.xLeft, this.yTop, 100, 100);
+        g2.setColor(Color.yellow);
+        //fills the sun
+        g2.fill(body);
+    }
+    public void move(){
+       this.xLeft += 2;
+    }
 }
 
